@@ -47,7 +47,7 @@ app.delete("/users/:id", (req, res) => {
     const id = req.params.id;
     const user = users.find((element) => element.id == parseInt(id));
     if (user == undefined) {
-        return res.status(404).send("User not found");
+        return res.status(404).send("User not deleted");
     } 
     users.splice(parseInt(id)-1,1);
     return res.send(users);
